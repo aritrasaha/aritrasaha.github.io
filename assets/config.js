@@ -1,7 +1,7 @@
 define([ './app' ], function (module) {
     module.config(
-    [ '$httpProvider', '$logProvider',
-    function ($httpProvider, $logProvider) {
+    [ '$httpProvider', '$locationProvider', '$logProvider',
+    function ($httpProvider, $locationProvider, $logProvider) {
         $httpProvider.interceptors.push([ '$q',
         function ($q) {
             return {
@@ -12,6 +12,8 @@ define([ './app' ], function (module) {
                 }
             };
         } ]);
+        
+        $locationProvider.html5Mode(true);
         
         $logProvider.debugEnabled(false);
     } ]);
