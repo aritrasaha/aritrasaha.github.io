@@ -13,7 +13,8 @@ define([ './app' ], function (module) {
             };
         } ]);
         
-        $locationProvider.html5Mode(true);
+//      $locationProvider.html5Mode(true);
+        $locationProvider.hashPrefix('!');
         
         $logProvider.debugEnabled(false);
     } ]);
