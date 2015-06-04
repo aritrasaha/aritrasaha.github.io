@@ -17,7 +17,15 @@
     </head>
     
     <body class="container" ng-controller="BodyController">
-        Welcome to the world of <b ng-bind="name"></b>..!!
-        <ng-view />
+        Welcome to the world of <b ng-bind="name"></b>..!!<br />
+        Click <a nohref ng-click="testUrl()">HERE</a><br />
+        Records: <strong ng-bind="records.length"></strong>
+
+        <select>
+            <option ng-repeat="record in records" ng-bind="record.Name"></option>
+        </select>
+
+        <div aritra-saha></div>
+        <div ng-view />
     </body>
 </html>
