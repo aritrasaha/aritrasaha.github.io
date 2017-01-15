@@ -1,7 +1,11 @@
 define([ '../app' ], function (module) {
     module.controller('BodyController',
-    [ '$scope',
-    function ($scope) {
-        $scope.name = "Aritra Saha"
+    [ '$scope', '$location',
+    function ($scope, $location) {
+        $scope.name = "Aritra Saha";
+        
+        $scope.openTest = function () {
+            $location.path("/test/google");
+        };
     } ]);
 });
